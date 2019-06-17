@@ -1,23 +1,19 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+  <div>
+    <Header />
+    <Home />
   </div>
-</template>
+</template>  
 
 <script>
-export default {
-  name: 'App'
-}
+  import Header from './components/Shared/Header.vue'
+  import Home from './components/HomePage/Home.vue'
+  export default {
+    components: {
+      Header,
+      Home
+    }
+  }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style lang="scss" src="./assets/style.scss"></style>

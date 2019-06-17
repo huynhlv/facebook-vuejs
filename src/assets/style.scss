@@ -1,0 +1,388 @@
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.5em;
+}
+
+body {
+  a:hover{
+    text-decoration: none;
+  }
+}
+
+// navbar
+.bg-navbar {
+  background: #415D9B;
+  padding: 0;
+  padding-left: 50px;
+  padding-right: 259px;
+  .iconfb {
+    width: 25px;
+    height: 25px;
+    img {
+      margin-bottom: 11px;
+      margin-left: 4px;
+    }
+  }
+  .search {
+    width: 50%;
+    font-size: 12px;
+    input {
+      border: 0;
+      width: 90%;
+      padding: 4px;
+      &:focus {
+        outline: none;
+      }
+    }
+    button {
+      border: 0;
+      cursor: pointer;
+      margin-left: -5px;
+      padding: 4px 15px;
+    }
+  }
+
+  .collapse {
+    .navbar-nav {
+      margin-left: 21%;
+    }
+    .font-size {
+      span {
+        font-size: 12px;
+        font-weight: bold;
+      }
+    }
+    .avatar-navbar {
+      vertical-align: middle;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.home {
+  padding-left: 44px;
+  padding-top: 12px;
+  margin-top: 40px;
+  background: #E9EBEF;
+  .sidebar {
+    width: 180px;
+    position: fixed;
+    .item {
+      &:hover {
+        background: #F5F6F7;
+      }
+      padding: 5px;
+      .icon {
+        padding: 2px;
+        width: 24px;
+      }
+      .name {
+        padding-left: 15px;
+        color: black;
+        font-size: 15px;
+      }
+    }
+    .active {
+      background: #F5F6F7;
+    }
+    .shortcuts {
+      padding: 7px;
+      padding-top: 10px;
+      font-size: 15px;
+      font-weight: bold;
+      color: gray;
+    }
+  }
+  .list-post {
+    width: 39%;
+    margin-left: 187px;
+    .new-post {
+      background: white;
+      .title {
+        background: #F5F6F7;
+        color: gray;
+        cursor: pointer;
+        font-size: 14px;
+        padding: 6px;
+        font-weight: bold;
+      }
+      .content {
+        margin: 10px;
+        padding-bottom: 15px;
+        img {
+          cursor: pointer;
+        }
+        input {
+          border: 0;
+          width: 100%;
+          padding-left: 15px;
+          padding-top: 9px;
+          font-size: 15px;
+          color: gray;
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+      .utilities {
+        padding: 10px;
+        span {
+          font-size: 15px;
+        }
+        .image-video {
+          background: #F5F6F7;
+          margin-right: 5px;
+          border-radius: 14px;
+          padding: 3px;
+          a {
+            padding: 10px;
+            .fa-images {
+              color: #9FCD6A;
+            }
+            .fa-user-tag {
+              color: #4DB3F7;
+            }
+            .fa-grin {
+              color: #F2AF70;
+            }
+            span {
+              color: black;
+            }
+          }
+          &:hover {
+            background: #EBEDF0;
+          }
+        }
+      }
+    }
+    .post {
+      background: white;
+      .content {
+        padding: 10px;
+        img {
+          cursor: pointer;
+        }
+        .profile {
+          .name {
+            font-size: 15px;
+            font-weight: bold;
+            color: #355899;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+          .time {
+            font-size: 12px;
+            color: gray;
+          }
+        }
+        .dots {
+          display: flex;
+          justify-content: flex-end;
+          width: 70%;
+          a {
+            color: gray;
+          }
+        }
+        .description {
+          font-size: 15px;
+        }
+      }
+      .image {
+        img {
+          width: 100%;
+        }
+      }
+      .interactive {
+        padding: 10px;
+        .title {
+          .fa-gratipay {
+            color: #EF4B50;
+            line-height: inherit;
+          }
+          a {
+            font-size: 15px;
+            color: gray;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+          .title-comment {
+            width: 100%;
+            justify-content: flex-end;
+            display: flex;
+          }
+        }
+        .button {
+          button {
+            width: 50%;
+            cursor: pointer;
+            background: white;
+            color: gray;
+            font-size: 15px;
+            border: 0;
+            padding: 5px;
+            margin: 4px;
+            border-radius: 3px;
+            &:hover {
+              background: #F2F3F2;
+            }
+          }
+        }
+      }
+    }
+  }
+  .news {
+    background: white;
+    .title {
+      .name {
+        font-size: 15px;
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+        color: gray;
+        font-weight: bold;
+      }
+      .utilities {
+        width: 100%;
+        text-align: end;
+        font-size: 12px;
+        a {
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .new {
+      .name {
+        margin-bottom: -5px;
+        a {
+          color: #355899;
+          font-size: 14px;
+          font-weight: bold;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      span {
+        font-size: 13px;
+        color: gray;
+      }
+      .img-border {
+        border: 2px solid #007bff;
+      }
+    }
+  }
+  .birthday {
+    background: white;
+    .fa-gift {
+      color: #BE5922;
+    }
+    span {
+      font-size: 13px;
+      font-weight: bold;
+      color: #355899;
+    }
+  }
+  .friend-request {
+    background: white;
+    .title {
+      span {
+        font-size: 14px;
+        color: gray;
+        font-weight: bold;
+      }
+      a {
+        font-size: 12px;
+        width: 63%;
+        text-align: end;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .add-friend {
+      .content {
+        .name {
+          color: #355899;
+          font-size: 14px;
+          font-weight: bold;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        .mutual-friend {
+          font-size: 12px;
+          color: gray;
+        }
+        .bt {
+          a {
+            background: rgb(235, 236, 238);
+            color: gray;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 4px 10px;
+            &:hover {
+              background: rgb(224, 227, 236);
+            }
+          }
+        }
+      }
+    }
+  }
+  .online {
+    margin-left: 79%;
+    margin-top: -10px;
+    width: 19%;
+    border-left: 1px solid #dee2e6;
+    position: fixed;
+    height: 100%;
+    .item {
+      &:hover {
+        background: #c9cbcf;
+        cursor: pointer;
+      }
+      .name {
+        width: 70%;
+        font-size: 13px;
+        padding-top: 5px;
+      }
+      .icon-online {
+        text-align: end;
+        font-size: 8px;
+        color: green;
+        padding-top: 11px;
+      }
+    }
+    .search {
+      position: fixed;
+      bottom: 0;
+      background: #F5F6F7;
+      width: 18%;
+      i {
+        font-size: 12px;
+        cursor: pointer;
+      }
+      input {
+        width: 61%;
+        border: 0;
+        font-size: 13px;
+        padding: 5px;
+        background: #F5F6F7;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}
