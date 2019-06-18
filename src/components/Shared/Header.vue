@@ -11,42 +11,42 @@
       </div>
       <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
         <ul class="navbar-nav nav-flex-icons">
-          <li class="nav-item">
+          <li :title="'Trang cá nhân'" class="nav-item">
             <a href="#" class="nav-link font-size border-right">
               <img class="avatar-navbar" src="https://scontent.fdad2-1.fna.fbcdn.net/v/t1.0-1/c141.115.755.755a/s24x24/59410777_1000376926827965_5249272818301927424_n.jpg?_nc_cat=101&_nc_oc=AQkTqyCNFw3Fc-UYpN0nOP1wvCbXHCRDIR1kz16VVrNEEg9kdBCDJgXYMLTGN5I6dMM&_nc_ht=scontent.fdad2-1.fna&oh=341cb0df328e5caf639b3d93aa541ae3&oe=5D8DE694">
               <span>Huỳnh</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li :title="'Trang chủ'" class="nav-item">
             <a href="#" class="nav-link font-size border-right">
               <span>Trang chủ</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li :title="'Tạo trang'" class="nav-item">
             <a href="#" class="nav-link font-size border-right">
               <span>Tạo</span>
             </a>
           </li>
 
           <div class="d-flex border-right">
-            <li class="nav-item">
+            <li :title="'Lời mời kết bạn'" class="nav-item">
               <a href="#" class="nav-link">
                 <i class="fas fa-user-friends"></i>
               </a>
             </li>
-            <li class="nav-item">
+            <li :title="'Tin nhắn'" class="nav-item">
               <a href="#" class="nav-link">
                 <i class="fab fa-facebook-messenger"></i>
               </a>
             </li>
-            <li class="nav-item">
+            <li :title="'Thông báo'" class="nav-item">
               <a href="#" class="nav-link">
                 <i class="fas fa-bell"></i>
               </a>
             </li>
           </div>
           
-          <li class="nav-item">
+          <li :title="'Trợ giúp nhanh'" class="nav-item">
             <a href="#" class="nav-link">
               <i class="fas fa-question-circle"></i>
             </a>

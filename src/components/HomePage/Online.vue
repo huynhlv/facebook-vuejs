@@ -1,13 +1,13 @@
 <template>
   <div class="online">
-    <div v-for="item in items" :key="item.id" class="pl-2 py-1 d-flex item" @click="showMessage(item.name, item.avatar)">
+    <div v-for="item in filterItems" :key="item.id" class="pl-2 py-1 d-flex item" @click="showMessage(item.name, item.avatar)">
       <img class="rounded-circle" :src="item.avatar" width="32" height="32">
       <span class="ml-2 name">{{ item.name }}</span>
       <span class="icon-online"><i class="fas fa-circle"></i></span>
     </div>
     <div class="search">
       <i class="fas fa-search ml-2"></i>
-      <input type="text" placeholder="Tìm kiếm">
+      <input type="text" placeholder="Tìm kiếm" v-model="search">
       <i :title="'Tùy chọn'" class="fas fa-cog mr-1"></i>
       <i :title="'Tin nhắn mới'" class="fas fa-calendar-plus mr-1"></i>
       <i :title="'Tạo nhóm mới'" class="fas fa-user-plus mr-1"></i>
@@ -26,8 +26,16 @@ export default {
       popupMessage.style.display = "block";
     }
   },
+  computed: {
+    filterItems() {
+      return this.items.filter(item => {
+        return item.name.toLowerCase().includes(this.search.toLowerCase())
+      })
+    }
+  },
   data() {
     return {
+      search: '',
       items: [
         {
           avatar: 'https://scontent.fdad3-1.fna.fbcdn.net/v/t1.0-1/p32x32/53080015_1249086161906298_3767192497667702784_n.jpg?_nc_cat=110&_nc_oc=AQlItcJgY9dTER1tp05xnALANnyQXbDRa7W2cpDO9RK9raQHB9c0FY4ZtjXTGLCepMw&_nc_ht=scontent.fdad3-1.fna&oh=21575b396a00f02de2c3409bbf9c762a&oe=5D83BF14',
