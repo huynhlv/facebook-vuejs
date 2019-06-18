@@ -341,6 +341,7 @@ body {
     }
   }
   .online {
+    overflow-y: scroll;
     margin-left: 79%;
     margin-top: -10px;
     width: 19%;
@@ -382,6 +383,97 @@ body {
         &:focus {
           outline: none;
         }
+      }
+    }
+  }
+  .message {
+    width: 284px;
+    height: 360px;
+    background: white;
+    box-shadow: 0 0 11px rgba(33,33,33,0.3);
+    position: fixed;
+    bottom: 0;
+    display: none;
+    margin-top: 300px;
+    margin-left: 57%;
+    .title {
+      &:hover {
+        background: #EBEDF0;
+        cursor: pointer;
+      }
+      img:hover {
+        cursor: pointer;
+      }
+      span:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      .name {
+        font-size: 14px;
+        font-weight: bold;
+        width: 42%;
+        padding-top: 3px;
+      }
+      i {
+        cursor: pointer;
+        padding-top: 6px;
+        padding-left: 12px;
+        color: #0084ff;
+      }
+      .fa-window-close {
+        color: #bec4c9;
+      }
+    }
+    .content {
+      height: 70%;
+      padding-top: 5px;
+      overflow-y: scroll;
+      .profile {
+        padding: 12px;
+        .detail {
+          font-size: 12px;
+          margin-left: 5px;
+          .title {
+            font-weight: bold;
+          }
+          .school {
+            color: gray;
+          }
+        }
+      }
+      .item {
+        text-align: end;
+        margin-left: 30%;
+        padding: 6px;
+        .text {
+          background: #0084ff;
+          padding: 10px;
+          color: white;
+          font-size: 13px;
+          border-radius: 14px;
+        }
+      }
+    }
+    input {
+      width: 100%;
+      border: 0;
+      font-size: 13px;
+      padding: 5px 8px;
+      &:focus {
+        outline: none;
+      }
+    }
+    .icon {
+      i {
+        cursor: pointer;
+        color: #bec4c9;
+        margin-left: 8px;
+        padding: 5px 0px;
+        font-size: 18px;
+      }
+      .fa-thumbs-up {
+        margin-left: 28%;
+        color: #0084ff;
       }
     }
   }

@@ -1,6 +1,6 @@
 <template>
   <div class="online">
-    <div v-for="item in items" :key="item.id" class="pl-2 py-1 d-flex item">
+    <div v-for="item in items" :key="item.id" class="pl-2 py-1 d-flex item" @click="showMessage(item.name, item.avatar)">
       <img class="rounded-circle" :src="item.avatar" width="32" height="32">
       <span class="ml-2 name">{{ item.name }}</span>
       <span class="icon-online"><i class="fas fa-circle"></i></span>
@@ -16,7 +16,16 @@
 </template>
 
 <script>
+import { evenBus } from '../../main.js';
 export default {
+  methods: {
+    showMessage(name, avatar) {
+      evenBus.$emit('name', name);
+      evenBus.$emit('avatar', avatar);
+      let popupMessage = document.getElementById('popup-message');
+      popupMessage.style.display = "block";
+    }
+  },
   data() {
     return {
       items: [
@@ -43,10 +52,6 @@ export default {
         {
           avatar: 'https://scontent.fdad1-1.fna.fbcdn.net/v/t1.0-1/c0.14.80.80a/p80x80/62303858_1358344867650107_4338797291226791936_n.jpg?_nc_cat=105&_nc_oc=AQlr03vctDhY6uKSE1geY2Xj_Rh-1znxKu4SZSfKD0C4NNS077eJaquq0oMgEDK5Vqk&_nc_ht=scontent.fdad1-1.fna&oh=5406635c602567894c96d516034889a7&oe=5D81CC84',
           name: 'Thanh Hạ'
-        },
-        {
-          avatar: 'https://scontent.fdad1-1.fna.fbcdn.net/v/t1.0-1/p80x80/64378516_1268424093317358_929346986308534272_n.jpg?_nc_cat=104&_nc_oc=AQmifIW4q8E29fcOjRZX0ZiIP3Xm-dzdRHRa1Y6KuwomGdVwL-4z7iRbt4VaK6XdWIg&_nc_ht=scontent.fdad1-1.fna&oh=405b8cb92e7aa4e32a1870645b15afa4&oe=5D8EC00F',
-          name: 'Quỳnh Sambi'
         },
         {
           avatar: 'https://scontent.fdad1-1.fna.fbcdn.net/v/t1.0-1/p80x80/62120236_1316077648547735_6314944892673982464_n.jpg?_nc_cat=102&_nc_oc=AQkNKXg0qDmRcDl0x5Lk37IXKI7vIs5Cu6ZpvUuyw_HQVXcEbzf5e7kyIE6oP4dyG5U&_nc_ht=scontent.fdad1-1.fna&oh=85284884995f8e007d773e7c41add29c&oe=5D8F63AA',
