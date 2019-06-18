@@ -282,6 +282,21 @@ body {
         border: 2px solid #007bff;
       }
     }
+    .show-more {
+      margin-top: 9px;
+      margin-left: 3px;
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+        cursor: pointer;
+        font-size: 13px;
+        margin-left: 7px;
+      }
+      i {
+        color: gray;
+      }
+    }
   }
   .birthday {
     background: white;
